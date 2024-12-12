@@ -6,7 +6,7 @@ void main() => runApp(FwitterApp());
 class FwitterApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Fwitter',
       home: OnboardingScreen(),
