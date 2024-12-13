@@ -2,6 +2,7 @@ import 'package:f_twitter_social_media_app/app_icons.dart';
 import 'package:flutter/material.dart';
 import 'dashboard.dart';
 
+// ignore: use_key_in_widget_constructors
 class SignupScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

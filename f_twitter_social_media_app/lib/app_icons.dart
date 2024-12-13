@@ -11,4 +11,6 @@ class AppIcon {
   static const IconData profile = IconData(0xf056, fontFamily: _kFontFam); // Signup
   static const IconData home = IconData(0xf053, fontFamily: _kFontFam); // Dashboard Home
   static const IconData search = IconData(0xf058, fontFamily: _kFontFam); // Dashboard Search
+  static const IconData notification = IconData(0xf055, fontFamily: _kFontFam); // Dashboard Notification
+  static const IconData messageFab = IconData(0xf053, fontFamily: _kFontFam); // Dashboard MessageFab
 }
