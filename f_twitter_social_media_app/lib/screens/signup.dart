@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:f_twitter_social_media_app/app_icons.dart';
 import 'package:flutter/material.dart';
 import 'dashboard.dart';
