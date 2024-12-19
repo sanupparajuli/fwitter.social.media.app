@@ -7,14 +7,14 @@ import 'package:f_twitter_social_media_app/main.dart';
 void main() {
   testWidgets('Onboarding screen shows Get Started button', (WidgetTester tester) async {
     // Build the app and trigger a frame.
-    await tester.pumpWidget(FwitterApp());
+    await tester.pumpWidget(const FwitterApp());
 
     // Verify if the Onboarding screen contains the "Get Started" button.
     expect(find.text('Get Started'), findsOneWidget);
   });
 
   testWidgets('Navigates to Login screen on Get Started button tap', (WidgetTester tester) async {
-    await tester.pumpWidget(FwitterApp());
+    await tester.pumpWidget(const FwitterApp());
 
     // Tap the "Get Started" button.
     await tester.tap(find.text('Get Started'));
@@ -25,7 +25,7 @@ void main() {
   });
 
   testWidgets('Login screen shows Login and Sign Up buttons', (WidgetTester tester) async {
-    await tester.pumpWidget(FwitterApp());
+    await tester.pumpWidget(const FwitterApp());
 
     // Navigate to Login screen.
     await tester.tap(find.text('Get Started'));
@@ -37,7 +37,7 @@ void main() {
   });
 
   testWidgets('Navigates to Dashboard screen on Login button tap', (WidgetTester tester) async {
-    await tester.pumpWidget(FwitterApp());
+    await tester.pumpWidget(const FwitterApp());
 
     // Navigate to Login screen.
     await tester.tap(find.text('Get Started'));
