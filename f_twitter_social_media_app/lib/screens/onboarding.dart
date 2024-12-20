@@ -15,65 +15,132 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   int _currentPage = 0;
 
   final List<Widget> _onboardingPages = [
-    const Column(
+    Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Icon(AppIcon.messageFab, size: 100),
-        SizedBox(height: 20),
-        Text(
-          'Welcome to Fwitter',
-          style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
-          textAlign: TextAlign.center,
-        ),
-        SizedBox(height: 20),
+        const Icon(AppIcon.messageFab, size: 100),
+        const SizedBox(height: 20),
+        // Welcome Text in a White Container
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
-          child: Text(
-            'Connect with friends and explore your network with ease.',
-            style: TextStyle(fontSize: 16, color: Colors.grey),
-            textAlign: TextAlign.center,
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Container(
+            padding: const EdgeInsets.all(16),
+            decoration: const BoxDecoration(
+              color: Colors.white, // White background
+              borderRadius: BorderRadius.all(Radius.circular(10)),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black26,
+                  blurRadius: 4,
+                  offset: Offset(0, 2),
+                ),
+              ],
+            ),
+            child: const Column(
+              children: [
+                Text(
+                  'Welcome to Fwitter',
+                  style: TextStyle(
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(height: 10),
+                Text(
+                  'Connect with friends and explore your network with ease.',
+                  style: TextStyle(fontSize: 16, color: Colors.black87),
+                  textAlign: TextAlign.center,
+                ),
+              ],
+            ),
           ),
         ),
       ],
     ),
-    const Column(
+    Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Icon(AppIcon.home, size: 100),
-        SizedBox(height: 20),
-        Text(
-          'Stay Connected',
-          style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
-          textAlign: TextAlign.center,
-        ),
-        SizedBox(height: 20),
+        const Icon(AppIcon.home, size: 100),
+        const SizedBox(height: 20),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
-          child: Text(
-            'Get real-time updates and notifications from your circle.',
-            style: TextStyle(fontSize: 16, color: Colors.grey),
-            textAlign: TextAlign.center,
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Container(
+            padding: const EdgeInsets.all(16),
+            decoration: const BoxDecoration(
+              color: Colors.white, // White background
+              borderRadius: BorderRadius.all(Radius.circular(10)),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black26,
+                  blurRadius: 4,
+                  offset: Offset(0, 2),
+                ),
+              ],
+            ),
+            child: const Column(
+              children: [
+                Text(
+                  'Stay Connected',
+                  style: TextStyle(
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(height: 10),
+                Text(
+                  'Get real-time updates and notifications from your circle.',
+                  style: TextStyle(fontSize: 16, color: Colors.black87),
+                  textAlign: TextAlign.center,
+                ),
+              ],
+            ),
           ),
         ),
       ],
     ),
-    const Column(
+    Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Icon(AppIcon.search, size: 100),
-        SizedBox(height: 20),
-        Text(
-          'Discover More',
-          style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
-          textAlign: TextAlign.center,
-        ),
-        SizedBox(height: 20),
+        const Icon(AppIcon.search, size: 100),
+        const SizedBox(height: 20),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
-          child: Text(
-            'Explore trending topics and connect with new people.',
-            style: TextStyle(fontSize: 16, color: Colors.grey),
-            textAlign: TextAlign.center,
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Container(
+            padding: const EdgeInsets.all(16),
+            decoration: const BoxDecoration(
+              color: Colors.white, // White background
+              borderRadius: BorderRadius.all(Radius.circular(10)),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black26,
+                  blurRadius: 4,
+                  offset: Offset(0, 2),
+                ),
+              ],
+            ),
+            child: const Column(
+              children: [
+                Text(
+                  'Discover More',
+                  style: TextStyle(
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(height: 10),
+                Text(
+                  'Explore trending topics and connect with new people.',
+                  style: TextStyle(fontSize: 16, color: Colors.black87),
+                  textAlign: TextAlign.center,
+                ),
+              ],
+            ),
           ),
         ),
       ],
@@ -101,53 +168,79 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: Stack(
         children: [
-          Expanded(
-            child: PageView(
-              controller: _pageController,
-              onPageChanged: (index) {
-                setState(() {
-                  _currentPage = index;
-                });
-              },
-              children: _onboardingPages,
+          // Background Image
+          Container(
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(
+                    "assets/images/background.jpg"), // Background image
+                fit: BoxFit.cover,
+              ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                TextButton(
-                  onPressed: _previousPage,
-                  child: Text(
-                    'Previous',
-                    style: TextStyle(
-                      color: _currentPage > 0 ? Colors.blue : Colors.grey,
-                    ),
+          Column(
+            children: [
+              // Logo at the top
+              Padding(
+                padding: const EdgeInsets.only(top: 80.0),
+                child: Center(
+                  child: Image.asset(
+                    "assets/images/fwitter_logo.jpg", // Logo image
+                    height: 100,
+                    width: 100,
                   ),
                 ),
-                if (_currentPage == _onboardingPages.length - 1)
-                  ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (_) => LoginScreen()),
-                      );
-                    },
-                    child: const Text('Get Started'),
-                  )
-                else
-                  TextButton(
-                    onPressed: _nextPage,
-                    child: const Text(
-                      'Next',
-                      style: TextStyle(color: Colors.blue),
+              ),
+              Expanded(
+                child: PageView(
+                  controller: _pageController,
+                  onPageChanged: (index) {
+                    setState(() {
+                      _currentPage = index;
+                    });
+                  },
+                  children: _onboardingPages,
+                ),
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    TextButton(
+                      onPressed: _previousPage,
+                      child: Text(
+                        'Previous',
+                        style: TextStyle(
+                          color: _currentPage > 0 ? Colors.blue : Colors.grey,
+                        ),
+                      ),
                     ),
-                  ),
-              ],
-            ),
+                    if (_currentPage == _onboardingPages.length - 1)
+                      ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (_) => LoginScreen()),
+                          );
+                        },
+                        child: const Text('Get Started'),
+                      )
+                    else
+                      TextButton(
+                        onPressed: _nextPage,
+                        child: const Text(
+                          'Next',
+                          style: TextStyle(color: Colors.blue),
+                        ),
+                      ),
+                  ],
+                ),
+              ),
+            ],
           ),
         ],
       ),

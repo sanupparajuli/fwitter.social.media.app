@@ -1,6 +1,8 @@
 name: f_twitter_social_media_app
 description: A new Flutter project.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# Remove this line if you wish to publish to pub.dev
+publish_to: 'none'
 
 version: 1.0.0+1
 
@@ -23,9 +25,7 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/fonts/  # Points to the folder containing the font file
-
-  fonts:
-    - family: TwitterIcon
-      fonts:
-        - asset: assets/fonts/twitter_icon.ttf  # Updated font file name
+    - assets/fonts/Roboto-BoldItalic.ttf             # Directory for custom fonts
+    - assets/images/  # Logo file
+    - assets/images/    # Background image file
+    - assets/images/   # logo

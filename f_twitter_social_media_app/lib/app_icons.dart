@@ -13,4 +13,7 @@ class AppIcon {
   static const IconData search = IconData(0xf058, fontFamily: _kFontFam); // Dashboard Search
   static const IconData notification = IconData(0xf055, fontFamily: _kFontFam); // Dashboard Notification
   static const IconData messageFab = IconData(0xf053, fontFamily: _kFontFam); // Dashboard MessageFab
+
+  // New flash icon
+  static const IconData flash = IconData(0xf0e7, fontFamily: _kFontFam); // Flash Logo
 }

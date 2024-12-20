@@ -1,6 +1,7 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:f_twitter_social_media_app/screens/splashscreen.dart';
+import 'package:f_twitter_social_media_app/theme/theme_data.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,14 +16,8 @@ class FwitterApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Fwitter',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        fontFamily: 'Roboto', // Custom font
-        textTheme: const TextTheme(
-          headline1: TextStyle(fontSize: 32.0, fontWeight: FontWeight.bold, color: Colors.blue),
-          bodyText1: TextStyle(fontSize: 16.0, color: Colors.grey),
-        ),
-      ),
+      theme: getApplicationTheme(),
+        
       home: const SplashScreen(), // Start with the Splash Screen
     );
   }
