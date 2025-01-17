@@ -1,11 +1,13 @@
 name: f_twitter_social_media_app
-description: A new Flutter project.
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
-# Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.6.0
+  sdk: ^3.5.4
 
 dependencies:
   flutter:
@@ -41,38 +43,17 @@ dev_dependencies:
   hive_generator: ^2.0.1
 
 flutter:
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
   uses-material-design: true
-
-  # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/fonts/
     - assets/images/
 
-  fonts:
-    - family: Montserrat
-      fonts:
-        - asset: assets/fonts/montserrat/Montserrat-Regular.ttf
-        - asset: assets/fonts/montserrat/Montserrat-Bold.ttf
-          weight: 700
-        - asset: assets/fonts/montserrat/Montserrat-Thin.ttf
-          weight: 300
-
-    - family: OpenSans
-      fonts:
-        - asset: assets/fonts/open_sans/OpenSans-Regular.ttf
-        - asset: assets/fonts/open_sans/OpenSans-Bold.ttf
-          weight: 700
-        - asset: assets/fonts/open_sans/OpenSans-Light.ttf
-          weight: 300
-
-flutter:
-  uses-material-design: true
-
-  assets:
-    - assets/fonts/Roboto-BoldItalic.ttf             # Directory for custom fonts
-    - assets/images/  # Logo file
-    - assets/images/    # Background image file
-    - assets/images/   # logo
+  # fonts:
+  #   - family: Poopins Bold
+  #     fonts:
+  #       - asset: assets/fonts/Poppins-Bold.ttf
+  #   - family: Poppins Italic
+  #     fonts:
+  #       - asset: assets/fonts/Poppins-Italic.ttf
+  #   - family: Poppins Regular
+  #     fonts:
+  #       - asset: assets/fonts/Poppins-Regular.ttf

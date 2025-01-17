@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
-class AccountView extends StatelessWidget {
-  const AccountView({super.key});
+class ExploreView extends StatelessWidget {
+  const ExploreView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
         backgroundColor: Colors.orange,
         elevation: 0,
+        automaticallyImplyLeading: false,
         title: const Text(
-          'Account',
+          'Explore',
           style: TextStyle(
             color: Colors.white,
             fontSize: 18,
@@ -22,7 +22,7 @@ class AccountView extends StatelessWidget {
       ),
       body: const Center(
         child: Text(
-          'Account',
+          'Cart',
           style: TextStyle(fontSize: 18),
         ),
       ),

@@ -1,7 +1,6 @@
 class HiveTableConstant {
   HiveTableConstant._();
 
-  // User table/box constants for login and signup
-  static const int userTableId = 0;
-  static const String userBox = 'userBox';
+  static const int customerTableId = 0;
+  static const String customerBox = 'customerBox';
 }

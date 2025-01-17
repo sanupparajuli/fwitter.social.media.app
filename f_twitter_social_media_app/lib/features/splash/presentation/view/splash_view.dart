@@ -1,4 +1,6 @@
+import 'package:f_twitter_social_media_app/features/splash/presentation/view_model/splash_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
@@ -30,7 +32,7 @@ class _SplashViewState extends State<SplashView> {
                   child: Image.asset('assets/images/splash.png'),
                 ),
                 const Text(
-                  'Student Course Management',
+                  'Twitter',
                   style: TextStyle(
                     fontSize: 25,
                   ),
@@ -46,7 +48,7 @@ class _SplashViewState extends State<SplashView> {
             bottom: 10,
             left: MediaQuery.of(context).size.width / 4,
             child: const Text(
-              'Developed by: Khatra Sir le',
+              'Developed by: Sanup',
               style: TextStyle(fontSize: 15),
             ),
           ),

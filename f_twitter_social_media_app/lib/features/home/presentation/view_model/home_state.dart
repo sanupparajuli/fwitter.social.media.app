@@ -1,11 +1,9 @@
 import 'package:equatable/equatable.dart';
+import 'package:f_twitter_social_media_app/app/di/di.dart';
+import 'package:f_twitter_social_media_app/features/home/presentation/view/bottom_view/dashboard_view.dart';
+import 'package:f_twitter_social_media_app/features/home/presentation/view_model/home_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:softwarica_student_management_bloc/app/di/di.dart';
-import 'package:softwarica_student_management_bloc/features/batch/presentation/view/batch_view.dart';
-import 'package:softwarica_student_management_bloc/features/batch/presentation/view_model/batch_bloc.dart';
-import 'package:softwarica_student_management_bloc/features/course/presentation/view/course_view.dart';
-import 'package:softwarica_student_management_bloc/features/course/presentation/view_model/course_bloc.dart';
 
 class HomeState extends Equatable {
   final int selectedIndex;
@@ -21,19 +19,19 @@ class HomeState extends Equatable {
     return HomeState(
       selectedIndex: 0,
       views: [
-        const Center(
-          child: Text('Dashboard'),
-        ),
-       BlocProvider(
-          create: (context) => getIt<CourseBloc>(),
-          child: CourseView(),
-        ),
         BlocProvider(
-          create: (context) => getIt<BatchBloc>(),
-          child: BatchView(),
+          create: (context) => getIt<HomeCubit>(),
+          child: DashboardView(),
         ),
-
-     
+        const Center(
+          child: Text('Wishlist'),
+        ),
+        const Center(
+          child: Text('Cart'),
+        ),
+        const Center(
+          child: Text('Inbox'),
+        ),
         const Center(
           child: Text('Account'),
         ),
