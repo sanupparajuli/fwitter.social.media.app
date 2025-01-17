@@ -27,6 +27,7 @@ class LoginScreen extends StatelessWidget {
                 Center(
   child: CircleAvatar(
     radius: 50, // Slightly larger circle
+    // ignore: deprecated_member_use
     backgroundColor: Colors.blueAccent.withOpacity(0.1),
     child: Image.asset(
       'assets/images/logo.png',
