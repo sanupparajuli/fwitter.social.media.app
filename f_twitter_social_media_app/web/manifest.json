@@ -1,6 +1,6 @@
 {
-    "name": "f_twitter_social_media_app",
-    "short_name": "f_twitter_social_media_app",
+    "name": "moments",
+    "short_name": "moments",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
