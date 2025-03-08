@@ -9,10 +9,12 @@ class LoginState {
     required this.isSuccess,
   });
 
+  // Initial state definition
   LoginState.initial()
       : isLoading = false,
         isSuccess = false;
 
+  // Simplified copyWith for state updates
   LoginState copyWith({
     bool? isLoading,
     bool? isSuccess,

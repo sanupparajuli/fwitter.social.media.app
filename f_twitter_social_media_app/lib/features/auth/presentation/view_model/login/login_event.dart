@@ -7,14 +7,17 @@ sealed class LoginEvent extends Equatable {
   List<Object> get props => [];
 }
 
-class NavigateRegisterScreenEvent extends LoginEvent {
+class NavigateToRegisterScreenEvent extends LoginEvent {
   final BuildContext context;
   final Widget destination;
 
-  const NavigateRegisterScreenEvent({
+  const NavigateToRegisterScreenEvent({
     required this.context,
     required this.destination,
   });
+
+  @override
+  List<Object> get props => [context, destination];
 }
 
 class NavigateHomeScreenEvent extends LoginEvent {
@@ -24,17 +27,24 @@ class NavigateHomeScreenEvent extends LoginEvent {
   const NavigateHomeScreenEvent({
     required this.context,
     required this.destination,
+
   });
+
+  @override
+  List<Object> get props => [context, destination];
 }
 
-class LoginCustomerEvent extends LoginEvent {
+class LoginUserEvent extends LoginEvent {
   final BuildContext context;
-  final String email;
+  final String username;
   final String password;
 
-  const LoginCustomerEvent({
+  const LoginUserEvent({
     required this.context,
-    required this.email,
+    required this.username,
     required this.password,
   });
+
+  @override
+  List<Object> get props => [username, password];
 }

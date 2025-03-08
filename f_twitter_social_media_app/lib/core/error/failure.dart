@@ -10,21 +10,21 @@ class Failure {
   String toString() => 'Failure(message: $message, statusCode: $statusCode)';
 }
 
-
-class LocalDatabaseFailure extends Failure{
-  LocalDatabaseFailure({required super.message});
-
+class LocalDatabaseFailure extends Failure {
+  LocalDatabaseFailure({
+    required super.message,
+  });
 }
 
-class ApiFailure extends Failure{
-
+class ApiFailure extends Failure {
+  final int? statusCode;
   @override
-  // ignore: overridden_fields
-  final int statusCode;
-  
   ApiFailure({
-    required this.statusCode,
-    required super.message
-    });
-  
+    this.statusCode,
+    required super.message,
+  });
+}
+
+class SharedPrefsFailure extends Failure {
+  SharedPrefsFailure({required super.message});
 }
